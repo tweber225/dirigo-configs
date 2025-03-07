@@ -1,0 +1,10 @@
+bidirectional_scanning = false
+line_width = "1.7 mm"
+frame_height = "1.7 mm"
+pixel_size = "1.0 μm"
+fill_fraction = 0.95
+buffers_per_acquisition = 99
+buffers_allocated = 4
+nchannels = 2
+digitizer_profile = "default"
+flyback_periods = 64 # Number of cycles of the fast scanner for slow scanner flyback
