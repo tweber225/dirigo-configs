@@ -81,3 +81,8 @@ device_name = "img0"
 
 [line_scan_camera]
 type = "aviiva_m2"
+
+
+[illuminator]
+type = "led_via_ni"
+enable_channel = "Dev1/port0/line15"
