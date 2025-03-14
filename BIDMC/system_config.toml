@@ -54,13 +54,13 @@ distance_per_pulse = "100 nm"
 
 
 [fast_raster_scanner]
-type = "ecu0_resonant_scanner"
-axis = "x"
+type = "ecu1_resonant_scanner"
+axis = "y"
 angle_limits = {min = "-13.0 deg", max = "13.0 deg"}
-frequency = "7920 Hz"
-analog_control_range = {min = "0 V", max = "5 V"}
-com_port = 3
-amplitude_control_channel = "Dev1/ao2"
+frequency = "7910 Hz"
+#analog_control_range = {min = "0 V", max = "5 V"}
+com_port = 4
+#amplitude_control_channel = "Dev1/ao2"
 enable_channel = "" # or None
 
 [slow_raster_scanner]
