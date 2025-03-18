@@ -1,12 +1,7 @@
-bidirectional_scanning = true
-line_width = "3 mm"
-pixel_size = "2 μm"
-#pixel_height = "1 μm" #(optional)
-fill_fraction = 0.9
-x_range = {min = "30 mm", max = "60 mm"}
-y_range = {min = "25 mm", max = "55 mm"}
-strip_overlap = 0.1
-lines_per_buffer = 512
-buffers_allocated = 8
-nchannels = 2 # must match digitizer profile (shouldn't it just pull from digitizer profile?)
-digitizer_profile = "default"
+line_width = "2 cm"
+pixel_size = "20 μm"
+#pixel_height = "1 μm" # (optional)
+x_range = {min = "20 mm", max = "90 mm"}
+y_range = {min = "25 mm", max = "45 mm"}
+integration_time = "0.2 ms"
+integration_duty_cycle = 0.9

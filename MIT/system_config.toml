@@ -43,14 +43,15 @@ counter_name = "Dev1/ctr0"
 signal_a_channel = "/Dev1/PFI2"
 signal_b_channel = "/Dev1/PFI3"
 sample_clock_channel = "/Dev1/PFI0"
-distance_per_pulse = "100 nm"
+trigger_channel = "/Dev1/PFI11"
+distance_per_pulse = "200 nm"
 
 [encoders.y_config]
 counter_name = "Dev1/ctr1"
 signal_a_channel = "/Dev1/PFI13"
 signal_b_channel = "/Dev1/PFI4"
 sample_clock_channel = "/Dev1/PFI0"
-distance_per_pulse = "100 nm"
+distance_per_pulse = "200 nm"
 
 
 [fast_raster_scanner]
@@ -81,6 +82,7 @@ device_name = "img0"
 
 [line_scan_camera]
 type = "aviiva_m2"
+axis = "y"
 
 
 [illuminator]
