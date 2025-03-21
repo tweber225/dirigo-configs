@@ -36,7 +36,8 @@ counter_name = "Dev1/ctr0"
 signal_a_channel = "/Dev1/PFI2"
 signal_b_channel = "/Dev1/PFI3"
 sample_clock_channel = "/Dev1/PFI0"
-trigger_channel = "/Dev1/PFI11" # output trigger for linearization
+trigger_channel = "/Dev1/PFI11"
+timestamp_counter_name = "Dev1/ctr2"
 distance_per_pulse = "200 nm"
 
 [encoders.y_config]
