@@ -1,12 +1,5 @@
-simulation = false
 
-
-[laser]
-pulsed = true
-pulse_frequency = "80.3 MHz"
-
-
-[optics]
+[optics] # TODO make multiple optics?
 relay_magnification = 5
 objective_focal_length = "20 mm"
 
@@ -43,7 +36,7 @@ counter_name = "Dev1/ctr0"
 signal_a_channel = "/Dev1/PFI2"
 signal_b_channel = "/Dev1/PFI3"
 sample_clock_channel = "/Dev1/PFI0"
-trigger_channel = "/Dev1/PFI11"
+trigger_channel = "/Dev1/PFI11" # output trigger for linearization
 distance_per_pulse = "200 nm"
 
 [encoders.y_config]
@@ -67,12 +60,12 @@ enable_channel = "" # or None
 [slow_raster_scanner]
 type = "galvo_slow_raster_scanner_via_ni"
 axis = "y"
+line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
+frame_clock_channel = "Dev1/port0/line5" # generated frame clock (out)
+trigger_channel = "/Dev1/PFI14" # waveform trigger (this will just be frame_clock_channel routed back in)
+control_channel = "Dev1/ao3" # axis waveform analog out
 angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
-control_channel = "Dev1/ao3"
-trigger_channel = "/Dev1/PFI14"
-frame_clock_channel = "Dev1/port0/line5"
-line_clock_channel = "/Dev1/PFI0"
 
 
 [frame_grabber]
