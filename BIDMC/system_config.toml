@@ -28,7 +28,7 @@ position_limits = {min = "1 mm", max = "74 mm"}
 # travel_per_rev = "100 μm"
 
 
-[encoders]
+[encoders] # via NI PCIe-6321
 type = "linear_encoders_via_ni"
 
 [encoders.x_config]
@@ -37,6 +37,7 @@ signal_a_channel = "/Dev1/RTSI4"
 signal_b_channel = "/Dev1/RTSI3"
 sample_clock_channel = "/Dev1/PFI0"
 trigger_channel = "/Dev1/PFI3" # output trigger for linearization
+timestamp_counter_name = "Dev1/ctr2"
 distance_per_pulse = "200 nm"
 
 [encoders.y_config]
@@ -52,14 +53,13 @@ type = "ecu1_resonant_scanner"
 axis = "y"
 angle_limits = {min = "-13.0 deg", max = "13.0 deg"}
 frequency = "7910 Hz"
-#analog_control_range = {min = "0 V", max = "5 V"}
+# ECU1 has an internal DAC to control amplitude, so no AO channel is used
 com_port = 4
-#amplitude_control_channel = "Dev1/ao2"
 enable_channel = "" # or None
 
 [slow_raster_scanner]
 type = "galvo_slow_raster_scanner_via_ni"
-axis = "y"
+axis = "x"
 line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
 frame_clock_channel = "Dev1/port0/line7" # generated frame clock (out)
 trigger_channel = "/Dev1/PFI4" # waveform trigger (this will just be frame_clock_channel routed back in)
@@ -68,7 +68,7 @@ angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
 
 
-[frame_grabber]
+[frame_grabber] # NI PCIe-1429
 type = "ni_frame_grabber"
 device_name = "img0"
 

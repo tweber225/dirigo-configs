@@ -28,7 +28,7 @@ step_angle = "1.8 deg"
 travel_per_rev = "100 μm"
 
 
-[encoders]
+[encoders] # via NI PCIe-6323
 type = "linear_encoders_via_ni"
 
 [encoders.x_config]
@@ -69,7 +69,7 @@ angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
 
 
-[frame_grabber]
+[frame_grabber] # NI PCIe-1433
 type = "ni_frame_grabber"
 device_name = "img0"
 
