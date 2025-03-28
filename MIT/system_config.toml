@@ -1,7 +1,11 @@
 
-[optics] # TODO make multiple optics?
+[laser_scanning_optics] 
 relay_magnification = 5
 objective_focal_length = "20 mm"
+
+
+[camera_optics]
+magnification = 0.2
 
 
 [digitizer] # Include settings that are required for start up / will NOT change
@@ -77,6 +81,7 @@ device_name = "img0"
 [line_scan_camera]
 type = "aviiva_m2"
 axis = "y"
+pixel_size = "10 μm"
 
 
 [illuminator]
