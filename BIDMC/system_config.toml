@@ -1,7 +1,11 @@
 
-[optics] # TODO make multiple optics?
+[laser_scanning_optics]
 relay_magnification = 4
 objective_focal_length = "20 mm"
+
+
+[camera_optics]
+magnification = 0.25 # not calibrated yet
 
 
 [digitizer] # Include settings that are required for start up / will NOT change
@@ -21,11 +25,7 @@ position_limits = {min = "1 mm", max = "74 mm"}
 
 
 # [objective_scanner]
-# type = "trinamic_objective_z_scanner"
-# axis = "z"
-# com_port = 5
-# step_angle = "1.8 deg"
-# travel_per_rev = "100 μm"
+# type = TBD
 
 
 [encoders] # via NI PCIe-6321
@@ -76,6 +76,7 @@ device_name = "img0"
 [line_scan_camera]
 type = "uniiqa_plus_color"
 axis = "y"
+pixel_size = "5 μm"
 
 
 [illuminator]

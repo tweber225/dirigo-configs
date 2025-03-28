@@ -5,7 +5,7 @@ objective_focal_length = "20 mm"
 
 
 [camera_optics]
-magnification = 0.2
+magnification = 0.2 # not calibrated yet
 
 
 [digitizer] # Include settings that are required for start up / will NOT change
