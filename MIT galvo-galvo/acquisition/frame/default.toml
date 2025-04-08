@@ -1,0 +1,10 @@
+bidirectional_scanning = false
+pixel_rate = "400 kHz"
+line_width = "14.0 mm"
+frame_height = "14.0 mm"
+pixel_size = "14.0 μm"
+fill_fraction = 0.8
+buffers_per_acquisition = 10
+buffers_allocated = 4 # is there a point to allowing this to be adjustable? could it be auto calculated?
+digitizer_profile = "default" # set number of channels
+flyback_periods = 2 # Number of cycles of the fast scanner for slow scanner flyback

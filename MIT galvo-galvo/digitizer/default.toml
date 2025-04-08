@@ -1,0 +1,21 @@
+
+[sample_clock]
+clock_source = "/Dev1/ao/SampleClock"
+# rate will be set by acquisition spec
+edge = "Rising"
+
+
+[channels]
+#enabled = [true, true, false, false]
+enabled = [true, true, false, false]
+coupling = ["DC", "DC", "DC", "DC"]
+# Impedance is not settable
+range = ["±1 V", "±1 V", "±1 V", "±1 V"]
+inverted = [false, false, false, false]
+channels = ["Dev1/ai0", "Dev1/ai1", "Dev1/ai2", "Dev1/ai3"]
+#channels = ["/Dev1/PFI11", "/Dev1/PFI3", "/Dev1/PFI9", "/Dev1/PFI10"]
+
+
+[trigger]
+source = "/Dev1/ao/StartTrigger"
+slope = "Rising"

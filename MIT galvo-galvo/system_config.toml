@@ -1,0 +1,29 @@
+
+[laser_scanning_optics] # Just using the scanner + scan lens (SL50-2P2)
+relay_magnification = 1
+objective_focal_length = "50 mm"
+
+
+[digitizer] # Include settings that are required for start up / will NOT change
+type = "NI" 
+device_name = "Dev1"
+
+# Scan head: Thorlabs LSKGG4
+[fast_raster_scanner] # QG4X-AG
+type = "fast_galvo_scanner_via_ni"
+axis = "x"
+analog_control_channel = "Dev1/ao0"
+angle_limits = {min = "-15.0 deg", max = "15.0 deg"}
+analog_control_range = {min = "-10 V", max = "10 V"}
+pixel_clock_channel = "/Dev1/PFI13"
+line_clock_channel = "Dev1/port0/line0"
+#external_pixel_clock_channel="/Dev1/PFI11" # To sync to an external pixel clock
+
+
+[slow_raster_scanner] # QG4Y-AG
+type = "slow_galvo_scanner_via_ni"
+axis = "y"
+analog_control_channel = "Dev1/ao1"
+angle_limits = {min = "-15.0 deg", max = "15.0 deg"}
+analog_control_range = {min = "-10 V", max = "10 V"}
+frame_clock_channel = "Dev1/port0/line1" # generated frame clock (out)
