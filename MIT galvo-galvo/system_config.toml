@@ -4,8 +4,8 @@ relay_magnification = 1
 objective_focal_length = "50 mm"
 
 
-[digitizer] # Include settings that are required for start up / will NOT change
-type = "NI" 
+[digitizer] 
+type = "NI" # NI PCIe-6351
 device_name = "Dev1"
 
 # Scan head: Thorlabs LSKGG4
@@ -18,7 +18,7 @@ analog_control_range = {min = "-10 V", max = "10 V"}
 pixel_clock_channel = "/Dev1/PFI13"
 line_clock_channel = "Dev1/port0/line0"
 #external_pixel_clock_channel="/Dev1/PFI11" # To sync to an external pixel clock
-
+input_delay = "110 μs"
 
 [slow_raster_scanner] # QG4Y-AG
 type = "slow_galvo_scanner_via_ni"
