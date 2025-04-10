@@ -1,11 +1,11 @@
 
-[laser_scanning_optics] 
+[laser_scanning_optics]
 relay_magnification = 5
 objective_focal_length = "20 mm"
 
 
 [camera_optics]
-magnification = 0.2 # not calibrated yet
+magnification = 0.25
 
 
 [digitizer] # Include settings that are required for start up / will NOT change
@@ -63,12 +63,11 @@ amplitude_control_channel = "Dev1/ao2"
 enable_channel = "" # or None
 
 [slow_raster_scanner]
-type = "galvo_slow_raster_scanner_via_ni"
+type = "slow_galvo_scanner_via_ni"
 axis = "y"
-line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
-frame_clock_channel = "Dev1/port0/line5" # generated frame clock (out)
-trigger_channel = "/Dev1/PFI14" # waveform trigger (this will just be frame_clock_channel routed back in)
-control_channel = "Dev1/ao3" # axis waveform analog out
+external_line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
+frame_clock_channel = "/Dev1/PFI1" # generated frame clock (out)
+analog_control_channel = "Dev1/ao3" # axis waveform analog out
 angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
 

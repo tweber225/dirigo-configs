@@ -9,7 +9,7 @@ edge = "Rising"
 enabled = [true, true, false, false]
 coupling = ["DC", "DC", "DC", "DC"]
 impedance = ["50 ohm", "50 ohm", "50 ohm", "50 ohm"]
-range = ["2 V", "2 V", "2 V", "2 V"]
+range = ["±2 V", "±2 V", "±2 V", "±2 V"]
 
 [trigger]
 source = "External"

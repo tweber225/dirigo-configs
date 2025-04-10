@@ -1,7 +1,7 @@
-line_width = "2 cm"
+line_width = "6 cm"
 pixel_size = "40 μm"
 #pixel_height = "1 μm" # (optional)
-x_range = {min = "2 mm", max = "98 mm"}
-y_range = {min = "35 mm", max = "55 mm"}
+x_range = {min = "20 mm", max = "80 mm"}
+y_range = {min = "5 mm", max = "65 mm"}
 integration_time = "0.4 ms"
-integration_duty_cycle = 0.95
+integration_duty_cycle = 0.75

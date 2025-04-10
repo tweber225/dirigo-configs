@@ -5,6 +5,5 @@ pixel_size = "1.0 μm"
 fill_fraction = 0.99
 buffers_per_acquisition = 'Inf'  
 buffers_allocated = 4
-nchannels = 2
 digitizer_profile = "default"
 flyback_periods = 64 # Number of cycles of the fast scanner for slow scanner flyback
