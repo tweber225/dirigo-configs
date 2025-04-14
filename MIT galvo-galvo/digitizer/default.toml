@@ -1,12 +1,11 @@
 
 [sample_clock]
-clock_source = "/Dev1/ao/SampleClock"
-# rate will be set by acquisition spec
+source = "Internal clock"
+rate = "10 MS/s"
 edge = "Rising"
 
 
 [channels]
-#enabled = [true, true, false, false]
 enabled = [true, true, false, false]
 coupling = ["DC", "DC", "DC", "DC"]
 # Impedance is not settable
