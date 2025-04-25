@@ -71,7 +71,7 @@ type = "slow_galvo_scanner_via_ni"
 axis = "x"
 external_line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
 frame_clock_channel = "/Dev1/PFI4" # generated frame clock (out)
-control_channel = "Dev1/ao1" # axis waveform analog out
+analog_control_channel = "Dev1/ao1" # axis waveform analog out
 angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
 
