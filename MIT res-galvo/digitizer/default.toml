@@ -1,12 +1,13 @@
 [sample_clock]
-# clock_source = "Internal clock"
-# rate = "100 MS/s"
-clock_source = "Fast external clock"
-rate = "80 MS/s"
+source = "Internal clock"
+rate = "100 MS/s"
+# source = "Fast external clock"
+# rate = "80 MS/s"
 edge = "Rising"
 
 [channels]
 enabled = [true, true, false, false]
+inverted = [true, false, false, false]
 coupling = ["DC", "DC", "DC", "DC"]
 impedance = ["50 ohm", "50 ohm", "50 ohm", "50 ohm"]
 range = ["±2 V", "±2 V", "±2 V", "±2 V"]

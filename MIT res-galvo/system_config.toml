@@ -8,6 +8,18 @@ objective_focal_length = "20 mm"
 magnification = 0.25
 
 
+[detectors]
+
+
+[detectors.0]
+type = "PMT2100"
+serial_number = "B9140040"
+
+[detectors.1]
+type = "PDA40"
+model = "PDA42"
+
+
 [digitizer] # Include settings that are required for start up / will NOT change
 type = "Alazar" # could add: model number, serial number to distinguish cards in multicard setups
 
@@ -32,7 +44,7 @@ step_angle = "1.8 deg"
 travel_per_rev = "100 μm"
 
 
-[encoders] # via NI PCIe-6323
+[encoders]
 type = "linear_encoders_via_ni"
 
 [encoders.x_config]
@@ -60,7 +72,9 @@ frequency = "7920 Hz"
 analog_control_range = {min = "0 V", max = "5 V"}
 com_port = 3
 amplitude_control_channel = "Dev1/ao2"
+response_time = "100 ms"
 enable_channel = "" # or None
+
 
 [slow_raster_scanner]
 type = "slow_galvo_scanner_via_ni"
@@ -72,7 +86,7 @@ angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
 
 
-[frame_grabber] # NI PCIe-1433
+[frame_grabber]
 type = "ni_frame_grabber"
 device_name = "img0"
 
