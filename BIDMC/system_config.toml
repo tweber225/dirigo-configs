@@ -11,10 +11,10 @@ magnification = 0.25 # not calibrated yet
 [detectors]
 
 [detectors.0]
-type = "ECU1PMT"
+type = "ecu1_pmt"
 
 [detectors.1]
-type = "ECU1PMT"
+type = "ecu1_pmt"
 
 
 [digitizer] # Include settings that are required for start up / will NOT change
