@@ -10,7 +10,6 @@ magnification = 0.25
 
 [detectors]
 
-
 [detectors.0]
 type = "PMT2100"
 serial_number = "B9140040"
@@ -44,11 +43,11 @@ step_angle = "1.8 deg"
 travel_per_rev = "100 μm"
 
 
-[encoders]
+[encoders] # via NI PCIe-6323
 type = "linear_encoders_via_ni"
 
 [encoders.x_config]
-counter_name = "Dev1/ctr0"
+counter_name = "Dev1/ctr0" # remove
 signal_a_channel = "/Dev1/PFI2"
 signal_b_channel = "/Dev1/PFI3"
 sample_clock_channel = "/Dev1/PFI0"
@@ -57,7 +56,7 @@ timestamp_counter_name = "Dev1/ctr2"
 distance_per_pulse = "200 nm"
 
 [encoders.y_config]
-counter_name = "Dev1/ctr1"
+counter_name = "Dev1/ctr1" # remove
 signal_a_channel = "/Dev1/PFI13"
 signal_b_channel = "/Dev1/PFI4"
 sample_clock_channel = "/Dev1/PFI0"
@@ -73,7 +72,7 @@ analog_control_range = {min = "0 V", max = "5 V"}
 com_port = 3
 amplitude_control_channel = "Dev1/ao2"
 response_time = "100 ms"
-enable_channel = "" # or None
+enable_channel = "" # or remove
 
 
 [slow_raster_scanner]
@@ -86,7 +85,7 @@ angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
 
 
-[frame_grabber]
+[frame_grabber] # NI PCIe-1433
 type = "ni_frame_grabber"
 device_name = "img0"
 

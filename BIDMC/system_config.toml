@@ -8,6 +8,15 @@ objective_focal_length = "20 mm"
 magnification = 0.25 # not calibrated yet
 
 
+[detectors]
+
+[detectors.0]
+type = "ECU1PMT"
+
+[detectors.1]
+type = "ECU1PMT"
+
+
 [digitizer] # Include settings that are required for start up / will NOT change
 type = "Alazar" # could add: model number, serial number to distinguish cards in multicard setups
 
@@ -32,16 +41,16 @@ position_limits = {min = "1 mm", max = "74 mm"}
 type = "linear_encoders_via_ni"
 
 [encoders.x_config]
-counter_name = "Dev1/ctr0"
+counter_name = "Dev1/ctr0" # remove
 signal_a_channel = "/Dev1/RTSI4"
 signal_b_channel = "/Dev1/RTSI3"
 sample_clock_channel = "/Dev1/PFI0"
 trigger_channel = "/Dev1/PFI3" # output trigger for linearization
-timestamp_counter_name = "Dev1/ctr2"
+timestamp_counter_name = "Dev1/ctr2" # remove
 distance_per_pulse = "200 nm"
 
 [encoders.y_config]
-counter_name = "Dev1/ctr1"
+counter_name = "Dev1/ctr1" # remove
 signal_a_channel = "/Dev1/RTSI5"
 signal_b_channel = "/Dev1/RTSI6"
 sample_clock_channel = "/Dev1/PFI0"
@@ -55,14 +64,13 @@ angle_limits = {min = "-13.0 deg", max = "13.0 deg"}
 frequency = "7910 Hz"
 # ECU1 has an internal DAC to control amplitude, so no AO channel is used
 com_port = 4
-enable_channel = "" # or None
+enable_channel = "" # remove
 
 [slow_raster_scanner]
-type = "galvo_slow_raster_scanner_via_ni"
+type = "slow_galvo_scanner_via_ni"
 axis = "x"
-line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
-frame_clock_channel = "Dev1/port0/line7" # generated frame clock (out)
-trigger_channel = "/Dev1/PFI4" # waveform trigger (this will just be frame_clock_channel routed back in)
+external_line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
+frame_clock_channel = "/Dev1/PFI4" # generated frame clock (out)
 control_channel = "Dev1/ao1" # axis waveform analog out
 angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
