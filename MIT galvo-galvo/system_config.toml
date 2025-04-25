@@ -5,8 +5,10 @@ objective_focal_length = "50 mm"
 
 
 [digitizer] 
-type = "NI" # NI PCIe-6351
+type = "NI" # NI PCI-6115
 device_name = "Dev1"
+#external_sample_clock_channel="/Dev1/PFI4" # To sync to an external pixel clock
+
 
 # Scan head: Thorlabs LSKGG4
 [fast_raster_scanner] # QG4X-AG
@@ -15,10 +17,9 @@ axis = "x"
 analog_control_channel = "Dev1/ao0"
 angle_limits = {min = "-15.0 deg", max = "15.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
-pixel_clock_channel = "/Dev1/PFI13"
 line_clock_channel = "Dev1/port0/line0"
-#external_pixel_clock_channel="/Dev1/PFI11" # To sync to an external pixel clock
 input_delay = "110 μs"
+
 
 [slow_raster_scanner] # QG4Y-AG
 type = "slow_galvo_scanner_via_ni"
