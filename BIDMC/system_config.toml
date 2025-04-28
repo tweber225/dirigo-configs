@@ -33,8 +33,10 @@ axis = "y"
 position_limits = {min = "1 mm", max = "74 mm"}
 
 
-# [objective_scanner]
-# type = TBD
+[objective_scanner]
+type = "MCM3000"
+axis = "z"
+com_port = 32
 
 
 [encoders] # via NI PCIe-6321
