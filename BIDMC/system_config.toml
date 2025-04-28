@@ -41,16 +41,13 @@ position_limits = {min = "1 mm", max = "74 mm"}
 type = "linear_encoders_via_ni"
 
 [encoders.x_config]
-counter_name = "Dev1/ctr0" # remove
 signal_a_channel = "/Dev1/RTSI4"
 signal_b_channel = "/Dev1/RTSI3"
 sample_clock_channel = "/Dev1/PFI0"
 trigger_channel = "/Dev1/PFI3" # output trigger for linearization
-timestamp_counter_name = "Dev1/ctr2" # remove
 distance_per_pulse = "200 nm"
 
 [encoders.y_config]
-counter_name = "Dev1/ctr1" # remove
 signal_a_channel = "/Dev1/RTSI5"
 signal_b_channel = "/Dev1/RTSI6"
 sample_clock_channel = "/Dev1/PFI0"
