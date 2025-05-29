@@ -21,15 +21,15 @@ type = "ecu1_pmt"
 type = "Alazar" # could add: model number, serial number to distinguish cards in multicard setups
 
 
-[stage]
+[stages]
 type = "BBD202"
 # Nominal speed, anything else?
 
-[stage.x_config]
+[stages.x_config]
 axis = "x"
 position_limits = {min = "1 mm", max = "109 mm"}
 
-[stage.y_config]
+[stages.y_config]
 axis = "y"
 position_limits = {min = "1 mm", max = "74 mm"}
 
