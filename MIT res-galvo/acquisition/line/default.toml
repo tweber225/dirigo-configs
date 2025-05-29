@@ -1,0 +1,7 @@
+bidirectional_scanning = true
+line_width = "1.5 mm"
+pixel_size = "1.0 μm"
+fill_fraction = 0.90
+lines_per_buffer = 1500
+buffers_per_acquisition = 5
+digitizer_profile = "default" # set number of channels

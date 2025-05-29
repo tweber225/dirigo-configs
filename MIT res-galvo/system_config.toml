@@ -11,31 +11,32 @@ magnification = 0.25
 [detectors]
 
 [detectors.0]
-type = "PMT2100"
-serial_number = "B9140040"
+type = "PDA40"
+model = "PDA42"
 
 [detectors.1]
 type = "PDA40"
 model = "PDA42"
 
 
-[digitizer] # Include settings that are required for start up / will NOT change
-type = "Alazar" # could add: model number, serial number to distinguish cards in multicard setups
+[digitizer] 
+type = "Alazar" 
+# could add: model number or serial number to differentiate multiple cards
 
-
-[stage]
+[stages]
 type = "BBD102"
-# Nominal speed, anything else?
-[stage.x_config]
+# Nominal speeds, anything else?
+
+[stages.x_config]
 axis = "x"
 position_limits = {min = "1 mm", max = "99 mm"}
 
-[stage.y_config]
+[stages.y_config]
 axis = "y"
 position_limits = {min = "1 mm", max = "74 mm"}
 
 
-[objective_scanner]
+[objective_z_scanner]
 type = "trinamic_objective_z_scanner"
 axis = "z"
 com_port = 5
@@ -43,7 +44,7 @@ step_angle = "1.8 deg"
 travel_per_rev = "100 μm"
 
 
-[encoders] # via NI PCIe-6323
+[encoders]
 type = "linear_encoders_via_ni"
 
 [encoders.x_config]
@@ -64,12 +65,12 @@ distance_per_pulse = "200 nm"
 type = "ecu0_resonant_scanner"
 axis = "x"
 angle_limits = {min = "-13.0 deg", max = "13.0 deg"}
-frequency = "7920 Hz"
+frequency = "7910 Hz"
+frequency_error = 0.002
 analog_control_range = {min = "0 V", max = "5 V"}
 com_port = 3
 amplitude_control_channel = "Dev1/ao2"
 response_time = "100 ms"
-enable_channel = "" # or remove
 
 
 [slow_raster_scanner]
@@ -82,7 +83,7 @@ angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
 
 
-[frame_grabber] # NI PCIe-1433
+[frame_grabber]
 type = "ni_frame_grabber"
 device_name = "img0"
 
