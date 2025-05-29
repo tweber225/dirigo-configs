@@ -44,14 +44,14 @@ step_angle = "1.8 deg"
 travel_per_rev = "100 μm"
 
 
-[encoders]
+[encoders] # via NI PCIe-6323
 type = "linear_encoders_via_ni"
 
 [encoders.x_config]
 signal_a_channel = "/Dev1/PFI2"
 signal_b_channel = "/Dev1/PFI3"
 sample_clock_channel = "/Dev1/PFI0"
-trigger_channel = "/Dev1/PFI11"
+trigger_channel = "/Dev1/PFI11" # output trigger for linearization
 distance_per_pulse = "200 nm"
 
 [encoders.y_config]
