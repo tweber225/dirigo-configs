@@ -1,8 +1,0 @@
-bidirectional_scanning = true
-line_width = "1.5 mm"
-strip_overlap = 8 # pixels
-pixel_size = "1.0 μm"
-fill_fraction = 0.90
-lines_per_buffer = 2000
-x_range = {min = "70 mm", max = "85 mm"}
-y_range = {min = "45 mm", max = "55 mm"}

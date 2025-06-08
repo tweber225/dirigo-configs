@@ -88,7 +88,7 @@ type = "ni_frame_grabber"
 device_name = "img0"
 
 
-[line_scan_camera]
+[line_camera]
 type = "aviiva_m2"
 axis = "y"
 pixel_size = "10 μm"

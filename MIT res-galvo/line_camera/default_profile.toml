@@ -1,0 +1,5 @@
+gain = 10 # 20 dB
+even_offset = 8
+odd_offset = 6
+even_gain = 0
+odd_gain = 4
