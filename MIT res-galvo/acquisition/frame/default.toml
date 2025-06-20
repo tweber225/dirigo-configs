@@ -1,6 +1,6 @@
 bidirectional_scanning = true
 line_width = "1.5 mm"
-frame_height = "1.0 mm"
+frame_height = "1.5 mm"
 pixel_size = "1.0 μm"
 fill_fraction = 0.9
 flyback_periods = 24 # Number of cycles of the fast scanner for slow scanner flyback

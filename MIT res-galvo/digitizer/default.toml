@@ -7,10 +7,10 @@ channels = [
 
 
 [sample_clock]
-# source = "Internal clock"
-# rate = "100 MS/s"
-source = "Fast external clock"
-rate = "80.3 MS/s" # measure external clock precisely (note the wavelength-dependence)
+source = "Internal clock"
+rate = "100 MS/s"
+# source = "Fast external clock"
+# rate = "80.3 MS/s" # measure external clock precisely (note the wavelength-dependence)
 # 80.28 MHz @ 1045 nm
 edge = "Rising"
 
