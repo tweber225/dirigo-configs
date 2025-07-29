@@ -66,7 +66,7 @@ type = "ecu0_resonant_scanner"
 axis = "x"
 angle_limits = {min = "-13.0 deg", max = "13.0 deg"}
 frequency = "7910 Hz"
-frequency_error = 0.002
+frequency_error = 0.003
 analog_control_range = {min = "0 V", max = "5 V"}
 com_port = 3
 amplitude_control_channel = "Dev1/ao2"
