@@ -5,7 +5,7 @@ objective_focal_length = "20 mm"
 
 
 [camera_optics]
-magnification = 0.25 # not calibrated yet
+magnification = 0.27777777777 # not calibrated yet
 
 
 [detectors]
@@ -84,7 +84,7 @@ type = "ni_frame_grabber"
 device_name = "img0"
 
 
-[line_scan_camera]
+[line_camera]
 type = "uniiqa_plus_color"
 axis = "y"
 pixel_size = "5 μm"

@@ -1,0 +1,13 @@
+# strip acquisition
+x_range = {min = "14 mm", max = "59 mm"}
+y_range = {min = "12 mm", max = "62 mm"}
+z_range = {min = "0 um",  max = "1 um"}
+z_step  = "1 um"
+strip_overlap = 0.05
+
+# line camera acquisition
+line_width = "50 mm"
+pixel_size = "18 um"
+integration_time = "0.4 ms"
+line_period = "0.5 ms"
+lines_per_buffer = 500
