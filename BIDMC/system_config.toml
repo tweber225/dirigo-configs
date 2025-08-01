@@ -37,7 +37,7 @@ position_limits = {min = "1 mm", max = "74 mm"}
 [objective_z_scanner]
 type = "MCM3000"
 axis = "z"
-com_port = 32
+com_port = 4
 
 
 [encoders] # via NI PCIe-6321
@@ -64,7 +64,7 @@ angle_limits = {min = "-13.0 deg", max = "13.0 deg"}
 frequency = "7910 Hz"
 frequency_error = 0.002
 # ECU1 has an internal DAC to control amplitude, so no AO channel is used
-com_port = 4
+com_port = 6
 enable_channel = "" # remove
 response_time = "100 ms"
 
