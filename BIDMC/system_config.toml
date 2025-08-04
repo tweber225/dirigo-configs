@@ -11,10 +11,14 @@ magnification = 0.27777777777 # not calibrated yet
 [detectors]
 
 [detectors.0]
-type = "ecu1_pmt"
+#type = "ecu1_pmt"
+type = "PDA40"
+model = "PDA42"
 
 [detectors.1]
-type = "ecu1_pmt"
+#type = "ecu1_pmt"
+type = "PDA40"
+model = "PDA42"
 
 
 [digitizer]

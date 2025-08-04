@@ -1,6 +1,6 @@
 channels = [
-    {enabled=true,  inverted=true, coupling="DC", impedance="50 ohm", range="±2 V"},
-    {enabled=true,  inverted=true, coupling="DC", impedance="50 ohm", range="±2 V"},
+    {enabled=true,  inverted=false, coupling="DC", impedance="50 ohm", range="±2 V"},
+    {enabled=true,  inverted=false, coupling="DC", impedance="50 ohm", range="±2 V"},
     {enabled=false, inverted=false, coupling="DC", impedance="50 ohm", range="±2 V"},
     {enabled=false, inverted=false, coupling="DC", impedance="50 ohm", range="±2 V"},
 ]
