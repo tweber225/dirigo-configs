@@ -8,7 +8,7 @@ channels = [
 
 [sample_clock]
 source = "Fast external clock"
-rate = "100 MS/s"
+rate = "100.8 MS/s"
 edge = "Rising"
 
 
