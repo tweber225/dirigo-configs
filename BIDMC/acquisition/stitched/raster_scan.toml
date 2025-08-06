@@ -1,9 +1,9 @@
 # stitched area
 x_range = {min = "35 mm", max = "60 mm"}
 y_range = {min = "35 mm", max = "60 mm"}
-z_range = {min = "-4 um",  max = "4.1 um"}
-z_step  = "4 um"
-strip_overlap = 0.01
+z_range = {min = "-5 um",  max = "5.1 um"}
+z_step  = "5 um"
+strip_overlap = 0.02
 
 # raster scan
 bidirectional_scanning = true
