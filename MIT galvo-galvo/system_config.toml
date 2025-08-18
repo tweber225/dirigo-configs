@@ -4,6 +4,13 @@ relay_magnification = 1
 objective_focal_length = "50 mm"
 
 
+[detectors]
+
+[detectors.0]
+type = "Generic"
+model = "PDA55"
+
+
 [digitizer] 
 type = "NI" # NI PCI-6115
 device_name = "Dev1"
