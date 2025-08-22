@@ -1,20 +1,17 @@
+channels = [
+    {enabled=true,  inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai0"},
+    {enabled=true,  inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai1"},
+    {enabled=false, inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai2"},
+    {enabled=false, inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai3"}
+]
+
 
 [sample_clock]
-source = "Internal clock"
+source = "internal"
 rate = "10 MS/s"
-edge = "Rising"
-
-
-[channels]
-enabled = [true, true, false, false]
-coupling = ["DC", "DC", "DC", "DC"]
-# Impedance is not settable
-range = ["±1 V", "±1 V", "±1 V", "±1 V"]
-inverted = [false, false, false, false]
-channels = ["Dev1/ai0", "Dev1/ai1", "Dev1/ai2", "Dev1/ai3"]
-#channels = ["/Dev1/PFI11", "/Dev1/PFI3", "/Dev1/PFI9", "/Dev1/PFI10"]
+edge = "rising"
 
 
 [trigger]
-source = "/Dev1/ao/StartTrigger"
-slope = "Rising"
+source = "internal"
+slope = "rising"
