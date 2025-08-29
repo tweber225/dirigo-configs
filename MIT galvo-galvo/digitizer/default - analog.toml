@@ -1,6 +1,6 @@
 channels = [
     {enabled=true,  inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai0"},
-    {enabled=true,  inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai1"},
+    {enabled=false, inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai1"},
     {enabled=false, inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai2"},
     {enabled=false, inverted=false, coupling="dc", impedance="1 MΩ", range="±1 V", channel="Dev1/ai3"}
 ]
@@ -8,7 +8,7 @@ channels = [
 
 [sample_clock]
 source = "internal"
-rate = "10 MS/s"
+rate = "1.25 MS/s"
 edge = "rising"
 
 

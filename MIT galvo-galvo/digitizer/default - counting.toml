@@ -1,0 +1,17 @@
+channels = [
+    {enabled=true, channel="/Dev1/PFI3"},
+    {enabled=true, channel="/Dev1/PFI4"},
+    {enabled=true, channel="/Dev1/PFI5"},
+    {enabled=true, channel="/Dev1/PFI6"}
+]
+
+
+[sample_clock]
+source = "internal"
+rate = "1 MS/s"
+edge = "rising"
+
+
+[trigger]
+source = "internal"
+slope = "rising"
