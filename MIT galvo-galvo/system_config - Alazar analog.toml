@@ -11,10 +11,8 @@ type = "Generic"
 model = "PDA55"
 
 
+# ATS9351
 [digitizer] 
-# type = "NI" # NI PCI-6115
-# device_name = "Dev1"
-# external_clock_channel = "/Dev1/PFI3" # To sync to an external pixel clock
 type = "alazar"
 
 
@@ -23,7 +21,8 @@ type = "alazar"
 type = "fast_galvo_scanner_via_ni"
 axis = "x"
 ao_clock_source = "internal"
-start_trigger = "/Dev1/ai/StartTrigger"
+ao_start_trigger = "internal"
+ao_sample_rate = "500 kS/s"
 analog_control_channel = "Dev1/ao0"
 angle_limits = {min = "-15.0 deg", max = "15.0 deg"} # Optical angle
 analog_control_range = {min = "-10 V", max = "10 V"}
@@ -34,6 +33,7 @@ input_delay = "110 μs"
 [slow_raster_scanner] # QG4Y-AG
 type = "slow_galvo_scanner_via_ni"
 axis = "y"
+# fast axis AO parameters are automatically copied to slow axis
 analog_control_channel = "Dev1/ao1"
 angle_limits = {min = "-15.0 deg", max = "15.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
