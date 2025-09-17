@@ -79,7 +79,7 @@ axis = "y"
 external_line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
 frame_clock_channel = "/Dev1/PFI1" # generated frame clock (out)
 analog_control_channel = "Dev1/ao3" # axis waveform analog out
-angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
+angle_limits = {min = "-20.0 deg", max = "20.0 deg"} # Optical angle
 analog_control_range = {min = "-10 V", max = "10 V"}
 
 

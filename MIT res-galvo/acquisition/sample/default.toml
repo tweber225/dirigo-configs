@@ -1,0 +1,4 @@
+record_length = 65536
+timestamps_enabled = false
+records_per_buffer = 64
+buffers_per_acquisition = 100
