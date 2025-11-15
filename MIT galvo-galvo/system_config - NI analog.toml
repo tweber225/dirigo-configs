@@ -11,27 +11,29 @@ type = "Generic"
 model = "PDA55"
 
 
+# NI PCIe-6115
 [digitizer] 
-type = "NI" # NI PCI-6115
-device_name = "Dev1"
-#external_sample_clock_channel="/Dev1/PFI4" # To sync to an external pixel clock
+type = "ni"
+device_name = "Dev2"
 
 
 # Scan head: Thorlabs LSKGG4
 [fast_raster_scanner] # QG4X-AG
 type = "fast_galvo_scanner_via_ni"
 axis = "x"
-analog_control_channel = "Dev1/ao0"
-angle_limits = {min = "-15.0 deg", max = "15.0 deg"}
+ao_clock_source = "/Dev2/ai/SampleClock"
+analog_control_channel = "Dev2/ao0"
+angle_limits = {min = "-15.0 deg", max = "15.0 deg"} # Optical angle
 analog_control_range = {min = "-10 V", max = "10 V"}
-line_clock_channel = "Dev1/port0/line0"
+line_clock_channel = "Dev2/port0/line0"
 input_delay = "110 μs"
 
 
 [slow_raster_scanner] # QG4Y-AG
 type = "slow_galvo_scanner_via_ni"
 axis = "y"
-analog_control_channel = "Dev1/ao1"
+analog_control_channel = "Dev2/ao1"
 angle_limits = {min = "-15.0 deg", max = "15.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
-frame_clock_channel = "Dev1/port0/line1" # generated frame clock (out)
+frame_clock_channel = "Dev2/port0/line1" # generated frame clock (out)
+flyback_time = "4 ms"
