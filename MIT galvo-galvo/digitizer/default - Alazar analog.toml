@@ -1,0 +1,17 @@
+# for ATS9351
+channels = [
+    {enabled=true, inverted=false, coupling="dc", impedance="50 Ω", range="±400 mV"},
+    {enabled=true, inverted=false, coupling="dc", impedance="50 Ω", range="±400 mV"},
+]
+
+
+[sample_clock]
+source = "internal"
+rate = "20 MS/s"
+edge = "rising"
+
+
+[trigger]
+source = "external"
+slope = "rising"
+external_range = "TTL"

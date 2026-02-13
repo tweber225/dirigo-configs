@@ -1,0 +1,39 @@
+
+[laser_scanning_optics] # Just using the scanner + scan lens (SL50-2P2)
+relay_magnification = 1
+objective_focal_length = "50 mm"
+
+
+[detectors]
+
+[detectors.0]
+type = "Generic"
+model = "PDA55"
+
+
+# NI PCIe-6115
+[digitizer] 
+type = "ni"
+device_name = "Dev2"
+
+
+# Scan head: Thorlabs LSKGG4
+[fast_raster_scanner] # QG4X-AG
+type = "fast_galvo_scanner_via_ni"
+axis = "x"
+ao_clock_source = "/Dev2/ai/SampleClock"
+analog_control_channel = "Dev2/ao0"
+angle_limits = {min = "-15.0 deg", max = "15.0 deg"} # Optical angle
+analog_control_range = {min = "-10 V", max = "10 V"}
+line_clock_channel = "Dev2/port0/line0"
+input_delay = "110 μs"
+
+
+[slow_raster_scanner] # QG4Y-AG
+type = "slow_galvo_scanner_via_ni"
+axis = "y"
+analog_control_channel = "Dev2/ao1"
+angle_limits = {min = "-15.0 deg", max = "15.0 deg"}
+analog_control_range = {min = "-10 V", max = "10 V"}
+frame_clock_channel = "Dev2/port0/line1" # generated frame clock (out)
+flyback_time = "4 ms"
