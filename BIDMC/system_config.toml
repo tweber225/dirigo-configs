@@ -1,7 +1,7 @@
 
 [laser_scanning_optics]
 relay_magnification = 4
-objective_focal_length = "20 mm"
+objective_focal_length = "10 mm"
 
 
 [camera_optics]
@@ -64,9 +64,10 @@ distance_per_pulse = "200 nm"
 [fast_raster_scanner]
 type = "ecu1_resonant_scanner"
 axis = "y"
+
 angle_limits = {min = "-13.0 deg", max = "13.0 deg"}
 frequency = "7910 Hz"
-frequency_error = 0.002
+frequency_error = 0.003
 # ECU1 has an internal DAC to control amplitude, so no AO channel is used
 com_port = 6
 enable_channel = "" # remove
@@ -76,11 +77,13 @@ response_time = "100 ms"
 [slow_raster_scanner]
 type = "slow_galvo_scanner_via_ni"
 axis = "x"
+ao_sample_rate = "500 kS/s"
 external_line_clock_channel = "/Dev1/PFI0" # fast axis sync signal (in)
 frame_clock_channel = "/Dev1/PFI4" # generated frame clock (out)
 analog_control_channel = "Dev1/ao1" # axis waveform analog out
 angle_limits = {min = "-20.0 deg", max = "20.0 deg"}
 analog_control_range = {min = "-10 V", max = "10 V"}
+flyback_time = "2 ms"
 
 
 [frame_grabber] # NI PCIe-1429
@@ -92,6 +95,7 @@ device_name = "img0"
 type = "uniiqa_plus_color"
 axis = "y"
 pixel_size = "5 μm"
+flip_line = false
 
 
 [illuminator]

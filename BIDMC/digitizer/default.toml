@@ -7,14 +7,14 @@ channels = [
 
 
 [sample_clock]
-source = "Fast external clock"
+source = "External"
 rate = "100.8 MS/s"
 edge = "Rising"
 
 
 [trigger]
-source = "External"
-slope = "Positive"
-level = "0 V"
-external_range = "TTL"
-external_coupling = "DC"
+source              = "External"
+slope               = "Rising"
+external_coupling   = "DC"
+external_impedance  = "high"
+external_range      = {min="0 V", max="5 V"}

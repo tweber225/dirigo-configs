@@ -1,13 +1,13 @@
 # strip acquisition
 x_range = {min = "9 mm", max = "63 mm"}
 y_range = {min = "9 mm", max = "66 mm"}
-z_range = {min = "0 um",  max = "1 um"}
+z_range = {min = "-2001 um",  max = "-2000 um"} # move the objective down X mm
 z_step  = "1 um"
 strip_overlap = 0.01
 
 # line camera acquisition
 line_width = "57.01 mm"
 pixel_size = "18 um"
-integration_time = "0.4 ms"
+integration_time = "0.45 ms"
 line_period = "0.5 ms"
 lines_per_buffer = 500
