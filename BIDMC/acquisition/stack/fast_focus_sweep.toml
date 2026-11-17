@@ -1,0 +1,10 @@
+bidirectional_scanning = true
+line_width = "2.0 mm"
+frame_height = "1.0 mm"
+pixel_size = "10 μm"
+line_duty_cycle = 0.9
+
+z_range = {min = "-100 um",  max = "100 um"}
+depth_spacing = "1 um"
+z_direction = "positive"
+n_volumes = 1

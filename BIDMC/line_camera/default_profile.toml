@@ -1,2 +1,5 @@
 gain = 4
+digital_gain = 2.512
+digital_offset = 10
 sensor_mode = '4096 pixels, 5x5 µm'
+scan_direction = 'reverse'

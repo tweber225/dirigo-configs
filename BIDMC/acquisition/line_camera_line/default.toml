@@ -1,0 +1,7 @@
+# line camera acquisition
+line_width = "25.6 mm"
+pixel_size = "6.561 um"
+integration_time = "0.25 ms"
+line_period = "0.25 ms" # FIX
+lines_per_buffer = 256
+buffers_per_acquisition = -1 # unlimited

@@ -1,14 +1,14 @@
 channels = [
-    {enabled=true,  inverted=false, coupling="DC", impedance="50 ohm", range="±2 V"},
-    {enabled=true,  inverted=false, coupling="DC", impedance="50 ohm", range="±2 V"},
-    {enabled=false, inverted=false, coupling="DC", impedance="50 ohm", range="±2 V"},
-    {enabled=false, inverted=false, coupling="DC", impedance="50 ohm", range="±2 V"},
+    {enabled=false,  inverted=false, coupling="DC", impedance="50 ohm", input_range="±2 V"},
+    {enabled=false,  inverted=false, coupling="DC", impedance="50 ohm", input_range="±2 V"},
+    {enabled=true, inverted=false, coupling="DC", impedance="50 ohm", input_range="±2 V"},
+    {enabled=true, inverted=false, coupling="DC", impedance="50 ohm", input_range="±2 V"},
 ]
 
 
 [sample_clock]
 source = "External"
-rate = "100.8 MS/s"
+rate = "100.801 MS/s"   # YMLO
 edge = "Rising"
 
 
@@ -17,4 +17,4 @@ source              = "External"
 slope               = "Rising"
 external_coupling   = "DC"
 external_impedance  = "high"
-external_range      = {min="0 V", max="5 V"}
+external_range      = {min="0 V", max="3.3 V"}

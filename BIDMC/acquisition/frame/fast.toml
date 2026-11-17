@@ -1,0 +1,6 @@
+bidirectional_scanning = true
+line_width = "2.0 mm"
+frame_height = "2.0 mm"
+pixel_size = "20 μm"
+line_duty_cycle = 0.9
+frames_per_acquisition = 10000
